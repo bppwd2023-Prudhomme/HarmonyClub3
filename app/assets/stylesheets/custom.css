@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(0, 7, 94);
+}
+
+.notice, .alert{
+    display: none;
+}
+
+nav, .navbar-collapse{
+    background-color: rgb(178, 34, 52);
+    font-weight: bold;
+}
+
+.navbar-brand{
+    width: 90%;
+    font-size: 1.75em;
+}
+
+#navbarContainer{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+#homeHeader{
+    padding-top: 72px;
+    padding-bottom: 96px;
+}
+
+p{
+    font-weight: bold;
+}
+
+#calendarContainer{
+    background-color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.navbar-nav{
+    padding-left: 20%;
+    padding-right: 20%;
+}

@@ -1,0 +1,39 @@
+<div class="container bg-light">
+  <h1>Featured Events:</h1>
+  <% @events.each do |e| %>
+    <h4><%= e.title %></h4>
+  <% end %>
+</div>
+
+<div id="calendarContainer">
+  <!-- Start of Calendar -->
+  <div class="row mt-2">
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+      <div class="calendar-heading text-center">
+        <a href="#"><img class="img-fluid calendarImageMarginBottom" alt="Previous month" src="https://harmonyclubofworcester.org/assets/outline_chevron_left_black_48dp-16c6821b4ece8c37855ebe958dd7512c41b1f0cb7a7c486ea4f3972f1a95eabc.png"></a>
+        <span class="calendar-title fs-1 fw-bold"><%= @months[(@now.month)-1] %> <%= @now.year %></span>
+        <a href="#"><img class="img-fluid calendarImageMarginBottom" style="margin-bottom: 0.9rem;" alt="Next month" src="https://harmonyclubofworcester.org/assets/outline_chevron_right_black_48dp-6025be582cc91bb7c957ca53445b96a73551fa80abbf0163852d5feea62bfd86.png"></a>
+      </div>
+      <div class="stupid-calendar" id="overflowCalendar">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody> 
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- End of calendar -->
+</div>
