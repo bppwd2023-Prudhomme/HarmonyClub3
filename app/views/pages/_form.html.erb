@@ -10,43 +10,49 @@
       </ul>
     </div>
   <% end %>
+  <div data-controller="event">
+    <div>
+      <%= form.label :page_type, style: "display: block" %>
+      <%= form.select :page_type, ["Basic Page", "External URL", "Internal URL", "PDF"], include_blank: true,
+      data:{
+        action: "change->event#display",
+        "event-target": "title"
+      } %>
+    </div>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+    <div>
+      <%= form.label :title, style: "display: block" %>
+      <%= form.text_field :title %>
+    </div>
 
-  <div>
-    <%= form.label :section_id, style: "display: block" %>
-    <%= form.number_field :section_id %>
-  </div>
+    <div>
+      <%= form.label :section_id, style: "display: block" %>
+      <%= form.number_field :section_id %>
+    </div>
 
-  <div>
-    <%= form.label :position, style: "display: block" %>
-    <%= form.number_field :position %>
-  </div>
+    <div>
+      <%= form.label :position, style: "display: block" %>
+      <%= form.number_field :position %>
+    </div>
 
-  <div>
-    <%= form.label :page_type, style: "display: block" %>
-    <%= form.text_field :page_type %>
-  </div>
 
-  <div>
-    <%= form.label :destination, style: "display: block" %>
-    <%= form.text_field :destination %>
-  </div>
+    <div>
+      <%= form.label :destination, style: "display: block" %>
+      <%= form.text_field :destination %>
+    </div>
 
-  <div>
-    <%= form.label :visible, style: "display: block" %>
-    <%= form.check_box :visible %>
-  </div>
+    <div>
+      <%= form.label :visible, style: "display: block" %>
+      <%= form.check_box :visible %>
+    </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
-  </div>
+    <div>
+      <%= form.label :content, style: "display: block" %>
+      <%= form.text_area :content %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

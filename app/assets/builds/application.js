@@ -6655,8 +6655,19 @@
     }
   };
 
+  // app/javascript/controllers/event_controller.js
+  var event_controller_default = class extends Controller {
+    connect() {
+      console.log("Yo stimulus", this.element);
+    }
+    display() {
+      console.log("We actioned");
+    }
+  };
+
   // app/javascript/controllers/index.js
   application.register("hello", hello_controller_default);
+  application.register("event", event_controller_default);
 
   // node_modules/@popperjs/core/lib/index.js
   var lib_exports = {};
