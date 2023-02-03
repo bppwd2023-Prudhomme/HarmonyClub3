@@ -42,3 +42,11 @@ p{
     padding-left: 20%;
     padding-right: 20%;
 }
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}

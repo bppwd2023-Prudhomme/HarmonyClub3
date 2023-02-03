@@ -13,10 +13,10 @@
   <div data-controller="event">
     <div>
       <%= form.label :page_type, style: "display: block" %>
-      <%= form.select :page_type, ["Basic Page", "External URL", "Internal URL", "PDF"], include_blank: true,
+      <%= form.select :page_type, ["Basic Page", "External URL", "Internal URL", "PDF"], {include_blank: true},
       data:{
         action: "change->event#display",
-        "event-target": "title"
+        "event-target": "page_type"
       } %>
     </div>
 
@@ -46,7 +46,7 @@
       <%= form.check_box :visible %>
     </div>
 
-    <div>
+    <div data-event-target="content" class="hidden">
       <%= form.label :content, style: "display: block" %>
       <%= form.text_area :content %>
     </div>

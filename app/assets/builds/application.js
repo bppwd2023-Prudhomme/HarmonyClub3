@@ -1,12 +1,17 @@
 (() => {
   var __defProp = Object.defineProperty;
   var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
   var __esm = (fn2, res) => function __init() {
     return fn2 && (res = (0, fn2[__getOwnPropNames(fn2)[0]])(fn2 = 0)), res;
   };
   var __export = (target, all) => {
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
+  };
+  var __publicField = (obj, key, value) => {
+    __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+    return value;
   };
 
   // node_modules/@rails/actioncable/src/adapters.js
@@ -6661,9 +6666,16 @@
       console.log("Yo stimulus", this.element);
     }
     display() {
-      console.log("We actioned");
+      console.log("We actioned", this.page_typeTarget.value);
+      if (this.page_typeTarget.value == "Basic Page") {
+        console.log("Basic page detected");
+        this.contentTarget.classList.remove("hidden");
+      } else {
+        this.contentTarget.classList.add("hidden");
+      }
     }
   };
+  __publicField(event_controller_default, "targets", ["page_type", "content"]);
 
   // app/javascript/controllers/index.js
   application.register("hello", hello_controller_default);
